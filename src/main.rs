@@ -22,6 +22,10 @@ trait List<T: Copy> {
         self.index(self.length() - 1)
     }
 
+    fn is_empty(&self) -> bool {
+        self.length() == 0
+    }
+
     fn new<const N: usize>(args: [T; N]) -> Self;
 }
 
