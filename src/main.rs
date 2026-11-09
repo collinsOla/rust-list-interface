@@ -1,5 +1,13 @@
+use std::{self, ops::Deref, println};
+
 fn main() {
     println!("Hello, world!");
+    let mut l1: arrayList<i32> = arrayList {
+        data: Box::new([1, 2, 3, 4]),
+    };
+    let mut l2: linkedList<i32> = linkedList::new([1, 2, 3, 4, 5]);
+    println!("{}", l2.index(3));
+    println!("{}", l2.length());
 }
 
 trait List<T: Copy> {
